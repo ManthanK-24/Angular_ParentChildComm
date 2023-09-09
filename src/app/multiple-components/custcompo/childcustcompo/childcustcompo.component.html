@@ -1,0 +1,16 @@
+
+    <div  *ngFor="let section of data">
+        <div class="allitems" *ngIf="section.name == textInputData">
+            <h5 (click)="onTextClick(section.name)" *ngIf="selectedName == textInputData" style="color: green;">{{ section.name }}</h5>
+            <h5 (click)="onTextClick(section.name)" *ngIf="selectedName != textInputData">{{ section.name }}</h5>
+            <ul class="list-unstyled" *ngFor="let item of section.items">
+                <li class="mb-2">{{ item }}</li>
+            </ul>
+        </div>
+        <div class="allitems" *ngIf="textInputData != 'Links' && textInputData != 'Guides' && textInputData != 'Projects'">
+            <h5 (click)="onTextClick(section.name)">{{ section.name }}</h5>
+            <ul class="list-unstyled" *ngFor="let item of section.items">
+                <li class="mb-2">{{ item }}</li>
+            </ul>
+        </div>
+    </div>

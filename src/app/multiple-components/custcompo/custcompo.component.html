@@ -1,0 +1,22 @@
+<div class="f-container">
+    <div class="f-item">
+        <input [(ngModel)]="textInputData" type="text" placeholder="Enter text">
+        <!-- <button (click)="onSubmit()">Show</button> -->
+        <select [(ngModel)]="selectedName" placeholder="Select">
+            <option *ngFor="let section of data" [value]="section.name">{{ section.name }}</option>
+        </select>
+    </div>
+    
+    <div class="f-item">
+        <div class="f-container2">
+            <app-childcustcompo class="d-flex justify-content-around"
+            [textInputData]="textInputData"
+            [selectedName]="selectedName"
+            [data]="data"
+            (textClicked)="onTextClicked($event)"
+            >
+            </app-childcustcompo>
+        </div>
+    </div>
+    
+</div>

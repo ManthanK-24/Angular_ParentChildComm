@@ -1,0 +1,22 @@
+
+
+
+.allitems{
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-evenly; */
+   /* margin: 10px; */
+}
+
+.f-container2{
+    display: flex;
+    background-color: lightblue;
+    width: 100%;
+    height: 300px;
+    justify-content: space-evenly;
+}
+
+/* .child-container {
+    display: flex;
+    justify-content: space-evenly;
+  } */
